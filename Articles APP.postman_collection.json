@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "dcaeafab-5ab4-400a-91af-0dbd1048481d",
+		"name": "Articles APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15601013"
+	},
+	"item": [
+		{
+			"name": "Get articles with filters.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/articles/get_articles?category=Fantasy&author=Test 1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"articles",
+						"get_articles"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Fantasy"
+						},
+						{
+							"key": "author",
+							"value": "Test 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save new article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Test 2\",\r\n  \"category\": \"Fantasy\", // ALLOW BLANK\r\n  \"author\": \"Test 1\" // ALLOW BLANK\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/articles/save_article",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"articles",
+						"save_article"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
